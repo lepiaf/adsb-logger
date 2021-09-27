@@ -3,7 +3,7 @@ from transformer.transformer import Transformer
 
 class Velocity(Transformer):
     def support(self, obj) -> bool:
-        if obj['velocity'] is None:
+        if 'velocity' not in obj or obj['velocity'] is None:
             return False
 
         return True
